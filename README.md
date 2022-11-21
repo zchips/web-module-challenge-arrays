@@ -1,4 +1,4 @@
-## Advanced CSS and Intro to JavaScript
+## Advanced CSS and Intro to JavaScript - rough draft
 
 ## Arrays
 
