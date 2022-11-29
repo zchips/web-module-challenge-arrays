@@ -46,11 +46,13 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
+function copy(){
   /*your code here*/
+  const Flavors = [...originalFlavors]
+  return Flavors
 }
 
-
+// console.log('task 1', copy())
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -63,11 +65,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(originalFlavors){
   /*your code here*/
+  if(originalFlavors.length === 31){
+    return true
+  }else(console.log('task 2: false'))
+  return originalFlavors
  }
 
-
+console.log('task 2', is31Flavors(32))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -82,9 +88,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+
+function addFlavor(newArrayForNewItem, newFlavor){
   /*your code here*/
+  newArrayForNewItem.unshift(newFlavor)
+  return newArrayForNewItem
  }
+//  console.log('task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'))
 
 
 
@@ -100,11 +110,14 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(oldMenu){
  /*your code here*/
+oldMenu.pop();
+return oldMenu
 }
+// removeLastFlavor(originalFlavors);
 
-
+// console.log('task 4', removeLastFlavor)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -118,11 +131,13 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, index){
   /*your code here*/
+  return array[index]
 }
 
-
+getFlavorByIndex(originalFlavors, 2);
+// console.log('task5', getFlavorByIndex(originalFlavors, 2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
